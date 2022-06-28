@@ -3,6 +3,24 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import GroupAddOutlined from '@material-ui/icons/GroupAddOutlined';
 import {Grid, Typography,Paper, Avatar, TextField, Checkbox,Button,FormControlLabel, Link} from '@material-ui/core'
 export default class Signup extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            authData:{
+                carNumber: props.carNumber,
+                password: props.password
+            },
+            clientData:{
+                carNumber: props.carNumber,
+                fullName: props.fullName,
+                phoneNumber: props.phoneNumber,
+                validateAccount: props.validateAccount,
+
+
+            }
+        }
+    }
     
   render() {
     const avatarStyle = {backgroundColor:'#e79702'}
@@ -39,6 +57,7 @@ export default class Signup extends Component {
                 <FormControlLabel 
                     control={
                         <Checkbox
+                            required
                             name="checkbox"
                             color="#e79702"
                         />
