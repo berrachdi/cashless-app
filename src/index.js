@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Home from './components/Home';
 import {
   BrowserRouter,
   Routes,
@@ -19,6 +20,7 @@ root.render(
         <Route path='/' element={<App/>} />
         <Route path='/login'  element={<Login/>} />
         <Route path='/signup'  element={<Signup/>} />
+        <Route path='/home'  element={<Home/>} />
 
       
       </Routes>
